@@ -6,6 +6,20 @@ views = Blueprint('views', __name__)
 
 
 @views.route('/', methods=['GET', 'POST'])
-@login_required
 def home():
-    return render_template('home.html, user=current_user')
+    return render_template('index.html')
+
+
+@views.route('/bookings', methods=['GET', 'POST'])
+def booking():
+    return render_template('booking.html')
+
+
+@views.route('/contact', methods=['GET', 'POST'])
+def contact():
+    return render_template('contact.html')
+
+
+@views.route('/gallery', methods=['GET', 'POST'])
+def gallery():
+    return render_template('gallery.html')
